@@ -10,6 +10,7 @@ public class PortfolioMessage
     public string Name { get; set; } = string.Empty;
     [Required]
     [EmailAddress]
+    [RegularExpression(@"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$", ErrorMessage = "Email address is not valid")]
     public string Email { get; set; } = string.Empty;
     [Required]
     public string Message { get; set; } = string.Empty;
